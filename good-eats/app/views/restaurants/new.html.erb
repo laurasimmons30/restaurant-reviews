@@ -1,0 +1,30 @@
+<div class="row">
+ 
+  <div class="large-12">
+    <%= form_for @restaurant do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+
+      <%= f.label :city %>
+      <%= f.text_field :city %>
+
+      <%= f.label :state %>
+      <%= f.text_field :state %>
+
+      <%= f.label :zipcode %>
+      <%= f.text_field :zipcode %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.label :category %>
+      <%= f.text_field :category %>
+
+
+      <%= f.submit "Add Restaurant" %>
+    <% end %>
+  </div>
+</div>

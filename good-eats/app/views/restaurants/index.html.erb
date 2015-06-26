@@ -1,0 +1,17 @@
+<% @restaurants.empty? %>
+<table>
+  <tr>
+    <th>Restaurants</th>
+  </tr>
+
+  <% @restaurants.each do |restaurant| %>
+  <tr>
+    <td><%=link_to restaurant.name, restaurant_path(restaurant.id) %></td>
+   <td><%= link_to 'Delete',
+                restaurant_path(restaurant),
+                method: :delete %></td>
+  <% end %>
+  </tr>
+</table>
+ 
+<%= link_to 'Add New Restaurant', new_restaurant_path %>
